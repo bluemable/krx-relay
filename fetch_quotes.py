@@ -62,25 +62,36 @@ def fetch_domestic(code, name):
     if not d:
         return {"name": name, "error": "fetch_failed"}
 
-    # 네이버는 장중이면 현재가, 장마감이면 종가를 closePrice 로 준다
-    return {
+    out = {
         "name": d.get("stockName") or name,
         "price": f(d.get("closePrice")),
         "change": f(d.get("compareToPreviousClosePrice")),
         "change_pct": f(d.get("fluctuationsRatio")),
-        "open": f(d.get("openPrice")),
-        "high": f(d.get("highPrice")),
-        "low": f(d.get("lowPrice")),
         "prev_close": f(d.get("previousClose")),
-        "volume": f(d.get("accumulatedTradingVolume")),
-        "value": f(d.get("accumulatedTradingValue")),
         "market_cap": f(d.get("marketValue")),
         "per": f(d.get("per")),
         "pbr": f(d.get("pbr")),
-        # 네이버가 주는 상태 문자열. 'CLOSE' / 'OPEN' / 'PREOPEN' 등
         "market_status": d.get("marketStatus"),
-        "quote_time": d.get("localTradedAt") or d.get("tradeStopYn"),
+        "quote_time": d.get("localTradedAt"),
+        "open": None, "high": None, "low": None, "volume": None, "value": None,
     }
+
+    # basic 엔드포인트는 시/고/저/거래량을 주지 않는다. integration 으로 보강.
+    ext = get_json(f"https://m.stock.naver.com/api/stock/{code}/integration", tries=2)
+    if ext:
+        td = (ext.get("totalInfos") or [])
+        kv = {i.get("code"): i.get("value") for i in td if isinstance(i, dict)}
+        out["open"]   = f(kv.get("openPrice"))
+        out["high"]   = f(kv.get("highPrice"))
+        out["low"]    = f(kv.get("lowPrice"))
+        out["volume"] = f(kv.get("accumulatedTradingVolume"))
+        out["value"]  = f(kv.get("accumulatedTradingValue"))
+        out["high52"] = f(kv.get("highPriceOf52Weeks"))
+        out["low52"]  = f(kv.get("lowPriceOf52Weeks"))
+    else:
+        errors.append(f"integration failed: {code} (OHLC 없음, 현재가는 정상)")
+
+    return out
 
 
 # ---------------------------------------------------------------- 지수
@@ -99,20 +110,33 @@ def fetch_index(key, label):
 
 
 # ---------------------------------------------------------------- 환율
+FX_ENDPOINTS = [
+    ("api",  "https://api.stock.naver.com/marketindex/exchange/FX_USDKRW"),
+    ("m",    "https://m.stock.naver.com/api/marketindex/exchange/FX_USDKRW"),
+    ("front","https://m.stock.naver.com/front-api/marketIndex/productDetail"
+             "?category=exchange&reutersCode=FX_USDKRW"),
+]
+
+
 def fetch_fx():
-    d = get_json("https://m.stock.naver.com/front-api/marketIndex/prices"
-                 "?category=exchange&reutersCode=FX_USDKRW&page=1&pageSize=2")
-    try:
-        row = (d.get("result") or d.get("datas") or [])[0]
-        return {
-            "pair": "USD/KRW",
-            "price": f(row.get("closePrice")),
-            "change_pct": f(row.get("fluctuationsRatio")),
-            "date": row.get("localTradedAt") or row.get("dt"),
-        }
-    except Exception:
-        errors.append("fx: parse_failed")
-        return {"pair": "USD/KRW", "error": "fetch_failed"}
+    """네이버 환율 엔드포인트는 자주 바뀐다. 후보를 순차 시도하고 어느 게 먹혔는지 기록."""
+    for tag, url in FX_ENDPOINTS:
+        d = get_json(url, tries=1)
+        if not d:
+            continue
+        node = d.get("result") if isinstance(d.get("result"), dict) else d
+        for pk in ("closePrice", "closePrice2", "basePrice", "value"):
+            px = f(node.get(pk)) if isinstance(node, dict) else None
+            if px and 500 < px < 5000:          # 원/달러 상식 범위 검증
+                return {
+                    "pair": "USD/KRW",
+                    "price": px,
+                    "change_pct": f(node.get("fluctuationsRatio")),
+                    "date": node.get("localTradedAt") or node.get("dt"),
+                    "endpoint": tag,
+                }
+    errors.append("fx: 모든 엔드포인트 실패")
+    return {"pair": "USD/KRW", "price": None, "error": "all_endpoints_failed"}
 
 
 # ---------------------------------------------------------------- 해외
