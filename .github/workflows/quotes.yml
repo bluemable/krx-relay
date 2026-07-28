@@ -1,0 +1,54 @@
+name: quotes
+
+on:
+  schedule:
+    # cron 은 UTC 기준. KST = UTC+9
+    # KST 월~금 08:00~09:00  ->  UTC 일~목 23:00~24:00
+    - cron: '*/5 23 * * 0-4'
+    # KST 월~금 09:00~16:00  ->  UTC 월~금 00:00~07:00
+    - cron: '*/5 0-6 * * 1-5'
+  workflow_dispatch:        # 수동 실행 버튼
+
+# 동시 실행 방지: 늦게 뜬 잡이 먼저 뜬 잡을 덮어쓰는 것을 막는다
+concurrency:
+  group: quotes
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install --quiet requests yfinance pandas
+
+      - name: Fetch quotes
+        run: python fetch_quotes.py
+
+      - name: Commit
+        run: |
+          git config user.name  "quote-bot"
+          git config user.email "quote-bot@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "quotes $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M KST')"
+          # 다른 잡이 먼저 푸시했을 수 있으므로 rebase 후 재시도
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin ${{ github.ref_name }} && \
+            git push origin HEAD:${{ github.ref_name }} && exit 0
+            sleep 5
+          done
+          exit 1

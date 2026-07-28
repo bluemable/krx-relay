@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Claude Code 로컬 설정
+.claude/settings.local.json

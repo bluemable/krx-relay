@@ -1,0 +1,25 @@
+{
+  "_comment": "보유 수량·평단은 여기 넣지 않는다. 공개 시세만 중계한다.",
+
+  "domestic": {
+    "005930": "삼성전자",
+    "009150": "삼성전기",
+    "005380": "현대차",
+    "000660": "SK하이닉스"
+  },
+
+  "index": {
+    "KOSPI": "코스피",
+    "KOSDAQ": "코스닥"
+  },
+
+  "overseas": [
+    "SPYM", "QQQM", "SCHD",
+    "QLD", "QQQ",
+    "SPYI", "QQQI",
+    "MAIN", "O", "MO", "KO",
+    "GOOGL", "AMZN", "IBM",
+    "IAU", "UGL",
+    "SOXX", "SMH", "^SOX"
+  ]
+}
