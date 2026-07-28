@@ -30,7 +30,7 @@ jobs:
           cache: 'pip'
 
       - name: Install deps
-        run: pip install --quiet requests yfinance pandas
+        run: pip install --quiet -r requirements.txt
 
       - name: Fetch quotes
         run: python fetch_quotes.py
