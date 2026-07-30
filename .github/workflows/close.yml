@@ -1,0 +1,90 @@
+name: close
+
+# 장 마감 종가 확정 전용 워크플로.
+#
+# quotes.yml 의 '*/5 0-6 * * 1-5' 는 UTC 06:59(KST 15:59)에 끝난다.
+# 종가는 15:30 단일가 이후 ~15:40 KST(06:40 UTC)에 확정되므로 여유가 19분뿐이다.
+# README 에 적힌 대로 GitHub 스케줄러는 5~20분 밀리므로, 이 여유로는
+# 밀리는 날 종가를 통째로 놓친다. (실제로 2026-07-29 에 그렇게 됐다.)
+#
+# 그래서 종가만 따로, 여러 시각에 반복 시도한다.
+# append_history.py 가 멱등이므로 중복 실행돼도 한 번만 기록된다.
+
+on:
+  schedule:
+    # KST 15:45 / 16:10 / 16:40 / 17:30  ->  UTC 06:45 / 07:10 / 07:40 / 08:30
+    # 4번 시도. 앞선 시도가 성공하면 뒤 시도는 '추가 없음'으로 조용히 끝난다.
+    - cron: '45 6 * * 1-5'
+    - cron: '10 7 * * 1-5'
+    - cron: '40 7 * * 1-5'
+    - cron: '30 8 * * 1-5'
+  workflow_dispatch:
+
+concurrency:
+  group: quotes          # quotes.yml 과 같은 그룹. 커밋 충돌 방지
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install --quiet -r requirements.txt
+
+      - name: Fetch quotes
+        run: python fetch_quotes.py
+
+      - name: Verify market closed
+        id: verify
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          d = json.load(open('data/latest.json', encoding='utf-8'))
+          dom = d.get('domestic') or {}
+          closed = [c for c, v in dom.items() if v.get('market_status') == 'CLOSE']
+          total  = len(dom)
+          print(f"CLOSE 상태: {len(closed)}/{total}")
+          ok = total > 0 and len(closed) == total
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f"all_closed={'true' if ok else 'false'}\n")
+          if not ok:
+              print("아직 장중이거나 일부 종목 미확정 — history 기록은 건너뛴다")
+          PY
+
+      - name: Append history
+        if: steps.verify.outputs.all_closed == 'true'
+        run: python append_history.py
+
+      - name: Save close snapshot
+        if: steps.verify.outputs.all_closed == 'true'
+        run: |
+          mkdir -p data/close
+          cp data/latest.json "data/close/$(TZ=Asia/Seoul date '+%Y-%m-%d').json"
+
+      - name: Commit
+        run: |
+          git config user.name  "quote-bot"
+          git config user.email "quote-bot@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "close $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M KST')"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin ${{ github.ref_name }} && \
+            git push origin HEAD:${{ github.ref_name }} && exit 0
+            sleep 5
+          done
+          exit 1

@@ -1,0 +1,6 @@
+{"date":"2026-07-24","code":"009150","name":"삼성전기","open":1450000,"high":1450000,"low":1318000,"close":1326000,"volume":565681,"change_pct":-8.43,"captured_at":null,"source":"seed:samsungsem_ir"}
+{"date":"2026-07-27","code":"009150","name":"삼성전기","open":null,"high":null,"low":null,"close":1325000,"volume":null,"change_pct":-0.08,"captured_at":null,"source":"seed:derived_from_0728_change"}
+{"date":"2026-07-28","code":"009150","name":"삼성전기","open":1301000,"high":1301000,"low":1081000,"close":1114000,"volume":1510160,"change_pct":-15.92,"captured_at":"2026-07-28T18:28:45+09:00","source":"seed:relay_close_snapshot"}
+{"date":"2026-07-28","code":"KOSPI","name":"코스피","open":null,"high":null,"low":null,"close":6023.66,"volume":null,"change_pct":-10.84,"captured_at":"2026-07-28T18:28:45+09:00","source":"seed:relay_close_snapshot"}
+{"date":"2026-07-28","code":"005930","name":"삼성전자","open":null,"high":null,"low":null,"close":220000,"volume":null,"change_pct":-13.39,"captured_at":"2026-07-28T18:28:45+09:00","source":"seed:relay_close_snapshot"}
+{"date":"2026-07-28","code":"000660","name":"SK하이닉스","open":null,"high":null,"low":null,"close":1550000,"volume":null,"change_pct":-14.65,"captured_at":"2026-07-28T18:28:45+09:00","source":"seed:relay_close_snapshot"}
