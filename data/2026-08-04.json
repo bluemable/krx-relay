@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-04T19:18:33+09:00",
-  "fetched_at_utc": "2026-08-04T10:18:33+00:00",
-  "epoch": 1785838713,
+  "fetched_at_kst": "2026-08-04T20:00:20+09:00",
+  "fetched_at_utc": "2026-08-04T11:00:20+00:00",
+  "epoch": 1785841220,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -19,7 +19,7 @@
       "open": 239000.0,
       "high": 246500.0,
       "low": 227500.0,
-      "volume": 52358781.0,
+      "volume": 53757630.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -38,7 +38,7 @@
       "open": 1203000.0,
       "high": 1289000.0,
       "low": 1112000.0,
-      "volume": 2166082.0,
+      "volume": 2211354.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 151500.0
@@ -57,7 +57,7 @@
       "open": 390000.0,
       "high": 402500.0,
       "low": 376000.0,
-      "volume": 1153849.0,
+      "volume": 1176493.0,
       "value": null,
       "high52": 787000.0,
       "low52": 208500.0
@@ -76,7 +76,7 @@
       "open": 1580000.0,
       "high": 1630000.0,
       "low": 1483000.0,
-      "volume": 9007034.0,
+      "volume": 9224209.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 244000.0
@@ -102,9 +102,9 @@
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1432.3,
-    "change_pct": 0.1,
-    "date": "2026-08-04T19:16:43+09:00",
+    "price": 1430.3,
+    "change_pct": -0.03,
+    "date": "2026-08-04T19:59:53+09:00",
     "endpoint": "front"
   },
   "overseas": {
