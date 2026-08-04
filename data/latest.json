@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-04T17:01:29+09:00",
-  "fetched_at_utc": "2026-08-04T08:01:29+00:00",
-  "epoch": 1785830489,
+  "fetched_at_kst": "2026-08-04T18:29:44+09:00",
+  "fetched_at_utc": "2026-08-04T09:29:44+00:00",
+  "epoch": 1785835784,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -19,7 +19,7 @@
       "open": 239000.0,
       "high": 246500.0,
       "low": 227500.0,
-      "volume": 49778851.0,
+      "volume": 51835400.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -38,7 +38,7 @@
       "open": 1203000.0,
       "high": 1289000.0,
       "low": 1112000.0,
-      "volume": 2005385.0,
+      "volume": 2141326.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 151500.0
@@ -57,7 +57,7 @@
       "open": 390000.0,
       "high": 402500.0,
       "low": 376000.0,
-      "volume": 1108817.0,
+      "volume": 1144173.0,
       "value": null,
       "high52": 787000.0,
       "low52": 208500.0
@@ -76,7 +76,7 @@
       "open": 1580000.0,
       "high": 1630000.0,
       "low": 1483000.0,
-      "volume": 8577475.0,
+      "volume": 8908285.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 244000.0
@@ -89,7 +89,7 @@
       "change": 101.5,
       "change_pct": 1.62,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-04T17:00:00+09:00"
+      "quote_time": "2026-08-04T18:29:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
@@ -97,14 +97,14 @@
       "change": 43.37,
       "change_pct": 5.88,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-04T17:01:00+09:00"
+      "quote_time": "2026-08-04T18:29:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1433.2,
-    "change_pct": 0.17,
-    "date": "2026-08-04T16:59:53+09:00",
+    "price": 1433.6,
+    "change_pct": 0.2,
+    "date": "2026-08-04T18:25:53+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -139,10 +139,7 @@
       "asof": "2026-07-31"
     },
     "SPYI": {
-      "price": 52.86,
-      "prev_close": 52.52,
-      "change_pct": 0.65,
-      "asof": "2026-07-31"
+      "error": "insufficient_data"
     },
     "QQQI": {
       "price": 53.04,
