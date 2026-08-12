@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-12T17:07:02+09:00",
-  "fetched_at_utc": "2026-08-12T08:07:02+00:00",
-  "epoch": 1786522022,
+  "fetched_at_kst": "2026-08-12T17:38:14+09:00",
+  "fetched_at_utc": "2026-08-12T08:38:14+00:00",
+  "epoch": 1786523894,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -19,7 +19,7 @@
       "open": 242000.0,
       "high": 260500.0,
       "low": 241000.0,
-      "volume": 44080193.0,
+      "volume": 44487875.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -38,7 +38,7 @@
       "open": 1279000.0,
       "high": 1350000.0,
       "low": 1275000.0,
-      "volume": 1267316.0,
+      "volume": 1277847.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 153800.0
@@ -57,7 +57,7 @@
       "open": 403500.0,
       "high": 413000.0,
       "low": 399000.0,
-      "volume": 705859.0,
+      "volume": 722805.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -76,7 +76,7 @@
       "open": 1452000.0,
       "high": 1549000.0,
       "low": 1440000.0,
-      "volume": 6934714.0,
+      "volume": 7036224.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 244000.0
@@ -89,7 +89,7 @@
       "change": 233.51,
       "change_pct": 3.68,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-12T17:06:00+09:00"
+      "quote_time": "2026-08-12T17:37:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
@@ -97,14 +97,14 @@
       "change": 1.07,
       "change_pct": 0.12,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-12T17:06:00+09:00"
+      "quote_time": "2026-08-12T17:38:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
     "price": 1417.1,
     "change_pct": 0.25,
-    "date": "2026-08-12T17:05:33+09:00",
+    "date": "2026-08-12T17:36:53+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -115,10 +115,10 @@
       "asof": "2026-08-11"
     },
     "QQQM": {
-      "price": 295.83,
-      "prev_close": 296.85,
-      "change_pct": -0.34,
-      "asof": "2026-08-11"
+      "price": 296.85,
+      "prev_close": 297.7,
+      "change_pct": -0.29,
+      "asof": "2026-08-10"
     },
     "SCHD": {
       "price": 34.27,
@@ -139,16 +139,16 @@
       "asof": "2026-08-11"
     },
     "SPYI": {
-      "price": 54.09,
-      "prev_close": 54.19,
-      "change_pct": -0.18,
-      "asof": "2026-08-11"
+      "price": 54.19,
+      "prev_close": 54.18,
+      "change_pct": 0.02,
+      "asof": "2026-08-10"
     },
     "QQQI": {
-      "price": 55.04,
-      "prev_close": 55.14,
+      "price": 55.14,
+      "prev_close": 55.24,
       "change_pct": -0.18,
-      "asof": "2026-08-11"
+      "asof": "2026-08-10"
     },
     "MAIN": {
       "price": 59.03,
@@ -211,16 +211,16 @@
       "asof": "2026-08-11"
     },
     "SKHY": {
-      "price": 141.65,
-      "prev_close": 135.29,
-      "change_pct": 4.7,
-      "asof": "2026-08-11"
+      "price": 135.29,
+      "prev_close": 137.91,
+      "change_pct": -1.9,
+      "asof": "2026-08-10"
     },
     "NASA": {
-      "price": 25.53,
-      "prev_close": 25.39,
-      "change_pct": 0.55,
-      "asof": "2026-08-11"
+      "price": 25.39,
+      "prev_close": 25.55,
+      "change_pct": -0.63,
+      "asof": "2026-08-10"
     },
     "SOXX": {
       "price": 534.2,
