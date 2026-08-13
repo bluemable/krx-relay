@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-13T17:42:10+09:00",
-  "fetched_at_utc": "2026-08-13T08:42:10+00:00",
-  "epoch": 1786610530,
+  "fetched_at_kst": "2026-08-13T17:54:03+09:00",
+  "fetched_at_utc": "2026-08-13T08:54:03+00:00",
+  "epoch": 1786611243,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -19,7 +19,7 @@
       "open": 265000.0,
       "high": 271000.0,
       "low": 260500.0,
-      "volume": 52487638.0,
+      "volume": 52660171.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -38,7 +38,7 @@
       "open": 1371000.0,
       "high": 1548000.0,
       "low": 1371000.0,
-      "volume": 2288013.0,
+      "volume": 2295626.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 153800.0
@@ -57,7 +57,7 @@
       "open": 411500.0,
       "high": 431500.0,
       "low": 411500.0,
-      "volume": 1021248.0,
+      "volume": 1022411.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -76,7 +76,7 @@
       "open": 1579000.0,
       "high": 1634000.0,
       "low": 1552000.0,
-      "volume": 7285107.0,
+      "volume": 7302877.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 244000.0
@@ -89,7 +89,7 @@
       "change": 234.3,
       "change_pct": 3.56,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-13T17:41:00+09:00"
+      "quote_time": "2026-08-13T17:53:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
@@ -97,14 +97,14 @@
       "change": 2.46,
       "change_pct": 0.29,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-13T17:42:00+09:00"
+      "quote_time": "2026-08-13T17:54:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1425.0,
-    "change_pct": 0.42,
-    "date": "2026-08-13T17:40:03+09:00",
+    "price": 1422.8,
+    "change_pct": 0.27,
+    "date": "2026-08-13T17:52:54+09:00",
     "endpoint": "front"
   },
   "overseas": {
