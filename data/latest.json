@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-14T17:05:56+09:00",
-  "fetched_at_utc": "2026-08-14T08:05:56+00:00",
-  "epoch": 1786694756,
+  "fetched_at_kst": "2026-08-14T17:36:07+09:00",
+  "fetched_at_utc": "2026-08-14T08:36:07+00:00",
+  "epoch": 1786696567,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -19,7 +19,7 @@
       "open": 272500.0,
       "high": 278000.0,
       "low": 266000.0,
-      "volume": 36642326.0,
+      "volume": 37062710.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -38,7 +38,7 @@
       "open": 1580000.0,
       "high": 1647000.0,
       "low": 1511000.0,
-      "volume": 1998898.0,
+      "volume": 2013959.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 153800.0
@@ -57,7 +57,7 @@
       "open": 423000.0,
       "high": 456000.0,
       "low": 420000.0,
-      "volume": 2274914.0,
+      "volume": 2285084.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -76,7 +76,7 @@
       "open": 1675000.0,
       "high": 1700000.0,
       "low": 1626000.0,
-      "volume": 6696536.0,
+      "volume": 6768814.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 244000.0
@@ -89,7 +89,7 @@
       "change": 164.6,
       "change_pct": 2.42,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-14T17:05:00+09:00"
+      "quote_time": "2026-08-14T17:35:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
@@ -97,14 +97,14 @@
       "change": 3.28,
       "change_pct": 0.38,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-14T17:05:00+09:00"
+      "quote_time": "2026-08-14T17:36:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1414.8,
-    "change_pct": -0.38,
-    "date": "2026-08-14T17:02:24+09:00",
+    "price": 1413.4,
+    "change_pct": -0.48,
+    "date": "2026-08-14T17:34:22+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -157,10 +157,7 @@
       "asof": "2026-08-13"
     },
     "O": {
-      "price": 62.95,
-      "prev_close": 62.59,
-      "change_pct": 0.58,
-      "asof": "2026-08-13"
+      "error": "insufficient_data"
     },
     "MO": {
       "price": 65.08,
