@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-17T17:23:40+09:00",
-  "fetched_at_utc": "2026-08-17T08:23:40+00:00",
-  "epoch": 1786955020,
+  "fetched_at_kst": "2026-08-17T18:05:19+09:00",
+  "fetched_at_utc": "2026-08-17T09:05:19+00:00",
+  "epoch": 1786957519,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -102,9 +102,9 @@
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1415.2,
-    "change_pct": -0.35,
-    "date": "2026-08-17T17:17:47+09:00",
+    "price": 1414.8,
+    "change_pct": -0.38,
+    "date": "2026-08-17T17:55:49+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -205,10 +205,7 @@
       "asof": "2026-08-14"
     },
     "NVDA": {
-      "price": 225.16,
-      "prev_close": 225.3,
-      "change_pct": -0.06,
-      "asof": "2026-08-14"
+      "error": "insufficient_data"
     },
     "SKHY": {
       "price": 166.33,
