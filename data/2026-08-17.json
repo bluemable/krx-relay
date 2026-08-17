@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-17T13:21:07+09:00",
-  "fetched_at_utc": "2026-08-17T04:21:07+00:00",
-  "epoch": 1786940467,
+  "fetched_at_kst": "2026-08-17T14:03:51+09:00",
+  "fetched_at_utc": "2026-08-17T05:03:51+00:00",
+  "epoch": 1786943031,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -104,7 +104,7 @@
     "pair": "USD/KRW",
     "price": 1416.0,
     "change_pct": -0.3,
-    "date": "2026-08-17T13:18:13+09:00",
+    "date": "2026-08-17T13:59:53+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -187,10 +187,7 @@
       "asof": "2026-08-14"
     },
     "IBM": {
-      "price": 234.32,
-      "prev_close": 237.14,
-      "change_pct": -1.19,
-      "asof": "2026-08-14"
+      "error": "insufficient_data"
     },
     "IAU": {
       "price": 82.28,
