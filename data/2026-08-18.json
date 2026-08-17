@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-18T07:35:51+09:00",
-  "fetched_at_utc": "2026-08-17T22:35:51+00:00",
-  "epoch": 1787006151,
+  "fetched_at_kst": "2026-08-18T07:55:36+09:00",
+  "fetched_at_utc": "2026-08-17T22:55:36+00:00",
+  "epoch": 1787007336,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -151,10 +151,7 @@
       "asof": "2026-08-17"
     },
     "MAIN": {
-      "price": 58.15,
-      "prev_close": 58.8,
-      "change_pct": -1.11,
-      "asof": "2026-08-17"
+      "error": "insufficient_data"
     },
     "O": {
       "price": 62.4,
