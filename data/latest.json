@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-19T07:28:56+09:00",
-  "fetched_at_utc": "2026-08-18T22:28:56+00:00",
-  "epoch": 1787092136,
+  "fetched_at_kst": "2026-08-19T07:52:07+09:00",
+  "fetched_at_utc": "2026-08-18T22:52:07+00:00",
+  "epoch": 1787093527,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
