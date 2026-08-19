@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-20T06:44:58+09:00",
-  "fetched_at_utc": "2026-08-19T21:44:58+00:00",
-  "epoch": 1787175898,
+  "fetched_at_kst": "2026-08-20T07:02:17+09:00",
+  "fetched_at_utc": "2026-08-19T22:02:17+00:00",
+  "epoch": 1787176937,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -109,10 +109,7 @@
   },
   "overseas": {
     "SPYM": {
-      "price": 90.54,
-      "prev_close": 90.34,
-      "change_pct": 0.22,
-      "asof": "2026-08-19"
+      "error": "insufficient_data"
     },
     "QQQM": {
       "price": 294.85,
