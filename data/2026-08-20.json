@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-20T07:02:17+09:00",
-  "fetched_at_utc": "2026-08-19T22:02:17+00:00",
-  "epoch": 1787176937,
+  "fetched_at_kst": "2026-08-20T07:36:24+09:00",
+  "fetched_at_utc": "2026-08-19T22:36:24+00:00",
+  "epoch": 1787178984,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -16,10 +16,10 @@
       "pbr": null,
       "market_status": "CLOSE",
       "quote_time": "2026-08-19T16:10:20+09:00",
-      "open": 257500.0,
-      "high": 261500.0,
-      "low": 246500.0,
-      "volume": 45367912.0,
+      "open": null,
+      "high": null,
+      "low": null,
+      "volume": null,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -35,10 +35,10 @@
       "pbr": null,
       "market_status": "CLOSE",
       "quote_time": "2026-08-19T16:10:22+09:00",
-      "open": 1399000.0,
-      "high": 1431000.0,
-      "low": 1332000.0,
-      "volume": 1459516.0,
+      "open": null,
+      "high": null,
+      "low": null,
+      "volume": null,
       "value": null,
       "high52": 2417000.0,
       "low52": 153800.0
@@ -54,10 +54,10 @@
       "pbr": null,
       "market_status": "CLOSE",
       "quote_time": "2026-08-19T16:10:21+09:00",
-      "open": 423500.0,
-      "high": 425000.0,
-      "low": 406500.0,
-      "volume": 957056.0,
+      "open": null,
+      "high": null,
+      "low": null,
+      "volume": null,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -73,10 +73,10 @@
       "pbr": null,
       "market_status": "CLOSE",
       "quote_time": "2026-08-19T16:10:20+09:00",
-      "open": 1552000.0,
-      "high": 1655000.0,
-      "low": 1486000.0,
-      "volume": 9952266.0,
+      "open": null,
+      "high": null,
+      "low": null,
+      "volume": null,
       "value": null,
       "high52": 3002000.0,
       "low52": 244000.0
@@ -104,12 +104,15 @@
     "pair": "USD/KRW",
     "price": 1390.0,
     "change_pct": -1.66,
-    "date": "2026-08-20T06:27:58+09:00",
+    "date": "2026-08-20T07:04:12+09:00",
     "endpoint": "front"
   },
   "overseas": {
     "SPYM": {
-      "error": "insufficient_data"
+      "price": 90.54,
+      "prev_close": 90.34,
+      "change_pct": 0.22,
+      "asof": "2026-08-19"
     },
     "QQQM": {
       "price": 294.85,
