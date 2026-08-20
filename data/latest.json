@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-20T16:13:26+09:00",
-  "fetched_at_utc": "2026-08-20T07:13:26+00:00",
-  "epoch": 1787210006,
+  "fetched_at_kst": "2026-08-20T16:27:52+09:00",
+  "fetched_at_utc": "2026-08-20T07:27:52+00:00",
+  "epoch": 1787210872,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -19,7 +19,7 @@
       "open": 258000.0,
       "high": 274000.0,
       "low": 252000.0,
-      "volume": 42255840.0,
+      "volume": 42508556.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -38,7 +38,7 @@
       "open": 1426000.0,
       "high": 1444000.0,
       "low": 1335000.0,
-      "volume": 1339966.0,
+      "volume": 1344058.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 153800.0
@@ -57,7 +57,7 @@
       "open": 419000.0,
       "high": 425000.0,
       "low": 408000.0,
-      "volume": 730435.0,
+      "volume": 734120.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -76,7 +76,7 @@
       "open": 1598000.0,
       "high": 1721000.0,
       "low": 1576000.0,
-      "volume": 8701844.0,
+      "volume": 8752041.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 244000.0
@@ -89,7 +89,7 @@
       "change": 381.41,
       "change_pct": 5.89,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-20T16:13:00+09:00"
+      "quote_time": "2026-08-20T16:27:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
@@ -97,14 +97,14 @@
       "change": 16.43,
       "change_pct": 1.99,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-20T16:13:00+09:00"
+      "quote_time": "2026-08-20T16:27:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1394.2,
-    "change_pct": 0.3,
-    "date": "2026-08-20T16:11:53+09:00",
+    "price": 1395.0,
+    "change_pct": 0.36,
+    "date": "2026-08-20T16:26:43+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -187,7 +187,10 @@
       "asof": "2026-08-19"
     },
     "IBM": {
-      "error": "insufficient_data"
+      "price": 237.16,
+      "prev_close": 232.67,
+      "change_pct": 1.93,
+      "asof": "2026-08-19"
     },
     "IAU": {
       "price": 84.84,
