@@ -1,82 +1,82 @@
 {
-  "fetched_at_kst": "2026-08-21T12:33:37+09:00",
-  "fetched_at_utc": "2026-08-21T03:33:37+00:00",
-  "epoch": 1787283217,
+  "fetched_at_kst": "2026-08-21T13:19:52+09:00",
+  "fetched_at_utc": "2026-08-21T04:19:52+00:00",
+  "epoch": 1787285992,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
     "005930": {
       "name": "삼성전자",
-      "price": 279750.0,
-      "change": 8750.0,
-      "change_pct": 3.23,
+      "price": 278750.0,
+      "change": 7750.0,
+      "change_pct": 2.86,
       "prev_close": null,
       "market_cap": null,
       "per": null,
       "pbr": null,
       "market_status": "OPEN",
-      "quote_time": "2026-08-21T12:33:00+09:00",
+      "quote_time": "2026-08-21T13:19:20+09:00",
       "open": 273000.0,
       "high": 281500.0,
       "low": 266000.0,
-      "volume": 29655681.0,
+      "volume": 32087048.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
     },
     "009150": {
       "name": "삼성전기",
-      "price": 1322000.0,
-      "change": -74000.0,
-      "change_pct": -5.3,
+      "price": 1319000.0,
+      "change": -77000.0,
+      "change_pct": -5.52,
       "prev_close": null,
       "market_cap": null,
       "per": null,
       "pbr": null,
       "market_status": "OPEN",
-      "quote_time": "2026-08-21T12:33:20+09:00",
+      "quote_time": "2026-08-21T13:19:23+09:00",
       "open": 1388000.0,
       "high": 1393000.0,
       "low": 1306000.0,
-      "volume": 864676.0,
+      "volume": 917296.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 154400.0
     },
     "005380": {
       "name": "현대차",
-      "price": 419500.0,
-      "change": 2000.0,
-      "change_pct": 0.48,
+      "price": 418000.0,
+      "change": 500.0,
+      "change_pct": 0.12,
       "prev_close": null,
       "market_cap": null,
       "per": null,
       "pbr": null,
       "market_status": "OPEN",
-      "quote_time": "2026-08-21T12:33:21+09:00",
+      "quote_time": "2026-08-21T13:19:22+09:00",
       "open": 412000.0,
-      "high": 420000.0,
+      "high": 420500.0,
       "low": 405000.0,
-      "volume": 444990.0,
+      "volume": 504640.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
     },
     "000660": {
       "name": "SK하이닉스",
-      "price": 1760000.0,
-      "change": 69000.0,
-      "change_pct": 4.08,
+      "price": 1742000.0,
+      "change": 51000.0,
+      "change_pct": 3.02,
       "prev_close": null,
       "market_cap": null,
       "per": null,
       "pbr": null,
       "market_status": "OPEN",
-      "quote_time": "2026-08-21T12:33:14+09:00",
+      "quote_time": "2026-08-21T13:19:21+09:00",
       "open": 1714000.0,
       "high": 1773000.0,
       "low": 1669000.0,
-      "volume": 5069169.0,
+      "volume": 5440587.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 244000.0
@@ -85,26 +85,26 @@
   "index": {
     "KOSPI": {
       "name": "코스피",
-      "price": 6924.06,
-      "change": 71.48,
-      "change_pct": 1.04,
+      "price": 6900.0,
+      "change": 47.42,
+      "change_pct": 0.69,
       "market_status": "OPEN",
-      "quote_time": "2026-08-21T12:33:00+09:00"
+      "quote_time": "2026-08-21T13:19:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
-      "price": 800.07,
-      "change": -40.82,
-      "change_pct": -4.85,
+      "price": 801.14,
+      "change": -39.75,
+      "change_pct": -4.73,
       "market_status": "OPEN",
-      "quote_time": "2026-08-21T12:33:00+09:00"
+      "quote_time": "2026-08-21T13:19:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1381.3,
-    "change_pct": -0.97,
-    "date": "2026-08-21T12:28:53+09:00",
+    "price": 1381.7,
+    "change_pct": -0.94,
+    "date": "2026-08-21T13:16:33+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -157,10 +157,10 @@
       "asof": "2026-08-20"
     },
     "O": {
-      "price": 63.17,
-      "prev_close": 62.95,
-      "change_pct": 0.35,
-      "asof": "2026-08-20"
+      "price": 62.95,
+      "prev_close": 62.21,
+      "change_pct": 1.19,
+      "asof": "2026-08-19"
     },
     "MO": {
       "price": 66.94,
@@ -235,7 +235,7 @@
       "asof": "2026-08-20"
     },
     "^SOX": {
-      "price": 11800.0186,
+      "price": 11800.0195,
       "prev_close": 11738.2305,
       "change_pct": 0.53,
       "asof": "2026-08-20"
