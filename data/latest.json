@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-24T08:00:15+09:00",
-  "fetched_at_utc": "2026-08-23T23:00:15+00:00",
-  "epoch": 1787526015,
+  "fetched_at_kst": "2026-08-24T08:13:54+09:00",
+  "fetched_at_utc": "2026-08-23T23:13:54+00:00",
+  "epoch": 1787526834,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -15,11 +15,11 @@
       "per": null,
       "pbr": null,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-24T08:00:15+09:00",
-      "open": 281500.0,
-      "high": 285000.0,
-      "low": 266000.0,
-      "volume": 27672192.0,
+      "quote_time": "2026-08-24T08:13:55+09:00",
+      "open": 270000.0,
+      "high": 281500.0,
+      "low": 268500.0,
+      "volume": 2185080.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -34,14 +34,14 @@
       "per": null,
       "pbr": null,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-24T08:00:17+09:00",
+      "quote_time": "2026-08-24T08:13:57+09:00",
       "open": 1318000.0,
-      "high": 1348000.0,
-      "low": 1306000.0,
-      "volume": 702080.0,
+      "high": 1346000.0,
+      "low": 1301000.0,
+      "volume": 60532.0,
       "value": null,
       "high52": 2417000.0,
-      "low52": 154400.0
+      "low52": 155000.0
     },
     "005380": {
       "name": "현대차",
@@ -53,11 +53,11 @@
       "per": null,
       "pbr": null,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-24T08:00:19+09:00",
-      "open": 415000.0,
-      "high": 420500.0,
-      "low": 405000.0,
-      "volume": 371705.0,
+      "quote_time": "2026-08-24T08:13:58+09:00",
+      "open": 417000.0,
+      "high": 419500.0,
+      "low": 415000.0,
+      "volume": 19611.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -72,32 +72,32 @@
       "per": null,
       "pbr": null,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-24T08:00:21+09:00",
+      "quote_time": "2026-08-24T08:14:00+09:00",
       "open": 1745000.0,
-      "high": 1773000.0,
-      "low": 1669000.0,
-      "volume": 4247760.0,
+      "high": 1770000.0,
+      "low": 1730000.0,
+      "volume": 218023.0,
       "value": null,
       "high52": 3002000.0,
-      "low52": 245500.0
+      "low52": 253000.0
     }
   },
   "index": {
     "KOSPI": {
       "name": "코스피",
       "price": 6912.95,
-      "change": 60.37,
-      "change_pct": 0.88,
-      "market_status": "CLOSE",
-      "quote_time": "2026-08-21T18:59:00+09:00"
+      "change": 0.0,
+      "change_pct": 0.0,
+      "market_status": "PREOPEN",
+      "quote_time": "2026-08-24T08:14:02+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
       "price": 801.94,
-      "change": -38.95,
-      "change_pct": -4.63,
-      "market_status": "CLOSE",
-      "quote_time": "2026-08-21T18:59:00+09:00"
+      "change": 0.0,
+      "change_pct": 0.0,
+      "market_status": "PREOPEN",
+      "quote_time": "2026-08-24T08:14:03+09:00"
     }
   },
   "fx": {
