@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-24T17:03:06+09:00",
-  "fetched_at_utc": "2026-08-24T08:03:06+00:00",
-  "epoch": 1787558586,
+  "fetched_at_kst": "2026-08-24T17:25:24+09:00",
+  "fetched_at_utc": "2026-08-24T08:25:24+00:00",
+  "epoch": 1787559924,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -19,7 +19,7 @@
       "open": 270000.0,
       "high": 274000.0,
       "low": 255000.0,
-      "volume": 49830406.0,
+      "volume": 50217560.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -38,7 +38,7 @@
       "open": 1318000.0,
       "high": 1346000.0,
       "low": 1292000.0,
-      "volume": 843892.0,
+      "volume": 854864.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 155000.0
@@ -57,7 +57,7 @@
       "open": 417000.0,
       "high": 421500.0,
       "low": 408000.0,
-      "volume": 565931.0,
+      "volume": 571056.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -75,8 +75,8 @@
       "quote_time": "2026-08-24T16:10:21+09:00",
       "open": 1745000.0,
       "high": 1792000.0,
-      "low": 1670000.0,
-      "volume": 6171283.0,
+      "low": 1666000.0,
+      "volume": 6233033.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 253000.0
@@ -89,7 +89,7 @@
       "change": -215.99,
       "change_pct": -3.12,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-24T17:02:00+09:00"
+      "quote_time": "2026-08-24T17:25:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
@@ -97,14 +97,14 @@
       "change": 11.39,
       "change_pct": 1.42,
       "market_status": "CLOSE",
-      "quote_time": "2026-08-24T17:02:00+09:00"
+      "quote_time": "2026-08-24T17:25:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1384.0,
-    "change_pct": -0.22,
-    "date": "2026-08-24T17:00:14+09:00",
+    "price": 1384.9,
+    "change_pct": -0.15,
+    "date": "2026-08-24T17:22:43+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -235,7 +235,10 @@
       "asof": "2026-08-21"
     },
     "^SOX": {
-      "error": "insufficient_data"
+      "price": 11740.3701,
+      "prev_close": 11800.0195,
+      "change_pct": -0.51,
+      "asof": "2026-08-21"
     }
   },
   "errors": [
