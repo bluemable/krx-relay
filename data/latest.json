@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-08-25T08:06:33+09:00",
-  "fetched_at_utc": "2026-08-24T23:06:33+00:00",
-  "epoch": 1787612793,
+  "fetched_at_kst": "2026-08-25T08:16:38+09:00",
+  "fetched_at_utc": "2026-08-24T23:16:38+00:00",
+  "epoch": 1787613398,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -15,11 +15,11 @@
       "per": null,
       "pbr": null,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-25T08:06:34+09:00",
+      "quote_time": "2026-08-25T08:16:38+09:00",
       "open": 254500.0,
       "high": 257000.0,
       "low": 250500.0,
-      "volume": 816255.0,
+      "volume": 1439883.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
@@ -34,11 +34,11 @@
       "per": null,
       "pbr": null,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-25T08:06:35+09:00",
+      "quote_time": "2026-08-25T08:16:40+09:00",
       "open": 1302000.0,
       "high": 1318000.0,
-      "low": 1280000.0,
-      "volume": 16424.0,
+      "low": 1278000.0,
+      "volume": 34024.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 156400.0
@@ -53,11 +53,11 @@
       "per": null,
       "pbr": null,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-25T08:06:37+09:00",
+      "quote_time": "2026-08-25T08:16:41+09:00",
       "open": 415000.0,
-      "high": 426000.0,
+      "high": 429000.0,
       "low": 414000.0,
-      "volume": 70003.0,
+      "volume": 134091.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -72,11 +72,11 @@
       "per": null,
       "pbr": null,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-25T08:06:38+09:00",
+      "quote_time": "2026-08-25T08:16:43+09:00",
       "open": 1653000.0,
       "high": 1671000.0,
-      "low": 1626000.0,
-      "volume": 122416.0,
+      "low": 1624000.0,
+      "volume": 221260.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 253000.0
@@ -89,7 +89,7 @@
       "change": 0.0,
       "change_pct": 0.0,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-25T08:06:40+09:00"
+      "quote_time": "2026-08-25T08:16:44+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
@@ -97,7 +97,7 @@
       "change": 0.0,
       "change_pct": 0.0,
       "market_status": "PREOPEN",
-      "quote_time": "2026-08-25T08:06:41+09:00"
+      "quote_time": "2026-08-25T08:16:45+09:00"
     }
   },
   "fx": {
