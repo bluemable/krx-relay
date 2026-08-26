@@ -1,44 +1,44 @@
 {
-  "fetched_at_kst": "2026-08-26T13:22:32+09:00",
-  "fetched_at_utc": "2026-08-26T04:22:32+00:00",
-  "epoch": 1787718152,
+  "fetched_at_kst": "2026-08-26T14:02:27+09:00",
+  "fetched_at_utc": "2026-08-26T05:02:27+00:00",
+  "epoch": 1787720547,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
     "005930": {
       "name": "삼성전자",
-      "price": 264500.0,
-      "change": 7500.0,
-      "change_pct": 2.92,
+      "price": 264250.0,
+      "change": 7250.0,
+      "change_pct": 2.82,
       "prev_close": null,
       "market_cap": null,
       "per": null,
       "pbr": null,
       "market_status": "OPEN",
-      "quote_time": "2026-08-26T13:22:01+09:00",
+      "quote_time": "2026-08-26T14:02:00+09:00",
       "open": 261500.0,
       "high": 266500.0,
       "low": 255500.0,
-      "volume": 20179864.0,
+      "volume": 22287711.0,
       "value": null,
       "high52": 380000.0,
       "low52": 67500.0
     },
     "009150": {
       "name": "삼성전기",
-      "price": 1349000.0,
-      "change": -13000.0,
-      "change_pct": -0.95,
+      "price": 1350000.0,
+      "change": -12000.0,
+      "change_pct": -0.88,
       "prev_close": null,
       "market_cap": null,
       "per": null,
       "pbr": null,
       "market_status": "OPEN",
-      "quote_time": "2026-08-26T13:22:22+09:00",
+      "quote_time": "2026-08-26T14:02:21+09:00",
       "open": 1390000.0,
       "high": 1390000.0,
       "low": 1303000.0,
-      "volume": 627701.0,
+      "volume": 689159.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 158000.0
@@ -53,30 +53,30 @@
       "per": null,
       "pbr": null,
       "market_status": "OPEN",
-      "quote_time": "2026-08-26T13:22:01+09:00",
+      "quote_time": "2026-08-26T14:02:00+09:00",
       "open": 425000.0,
-      "high": 432500.0,
+      "high": 434000.0,
       "low": 415000.0,
-      "volume": 598799.0,
+      "volume": 821080.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
     },
     "000660": {
       "name": "SK하이닉스",
-      "price": 1726000.0,
-      "change": 48000.0,
-      "change_pct": 2.86,
+      "price": 1719000.0,
+      "change": 41000.0,
+      "change_pct": 2.44,
       "prev_close": null,
       "market_cap": null,
       "per": null,
       "pbr": null,
       "market_status": "OPEN",
-      "quote_time": "2026-08-26T13:22:21+09:00",
+      "quote_time": "2026-08-26T14:02:20+09:00",
       "open": 1713000.0,
       "high": 1735000.0,
       "low": 1662000.0,
-      "volume": 3462715.0,
+      "volume": 3746101.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 253000.0
@@ -85,26 +85,26 @@
   "index": {
     "KOSPI": {
       "name": "코스피",
-      "price": 6877.08,
-      "change": 134.34,
-      "change_pct": 1.99,
+      "price": 6865.13,
+      "change": 122.39,
+      "change_pct": 1.82,
       "market_status": "OPEN",
-      "quote_time": "2026-08-26T13:22:00+09:00"
+      "quote_time": "2026-08-26T14:02:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
-      "price": 827.32,
-      "change": 0.17,
-      "change_pct": 0.02,
+      "price": 825.67,
+      "change": -1.48,
+      "change_pct": -0.18,
       "market_status": "OPEN",
-      "quote_time": "2026-08-26T13:21:00+09:00"
+      "quote_time": "2026-08-26T14:01:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1384.8,
-    "change_pct": 0.09,
-    "date": "2026-08-26T13:20:23+09:00",
+    "price": 1386.0,
+    "change_pct": 0.18,
+    "date": "2026-08-26T14:00:53+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -199,10 +199,7 @@
       "asof": "2026-08-25"
     },
     "UGL": {
-      "price": 58.3,
-      "prev_close": 57.91,
-      "change_pct": 0.67,
-      "asof": "2026-08-25"
+      "error": "insufficient_data"
     },
     "NVDA": {
       "price": 213.05,
