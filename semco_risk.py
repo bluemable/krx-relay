@@ -106,6 +106,13 @@ def wilder(values, n):
  
 def won(x):
     return f"{int(round(x)):,}원" if x is not None else "—"
+
+
+def pct(x, sign=True):
+    """None 이면 '—'. relay 가 필드를 못 채웠을 때 포매팅에서 죽지 않게 한다."""
+    if x is None:
+        return "—"
+    return f"{x:+.2f}%" if sign else f"{x:.2f}%"
  
  
 def main():
@@ -127,23 +134,38 @@ def main():
     # ── 현재가 ─────────────────────────────────────────────
     if live:
         price = live["price"]
-        stale = live["_age_min"] > FRESH_LIMIT_MIN
-        flag = "STALE ⚠" if stale else "FRESH ✓"
+        # 장이 닫혀 있으면 수집이 늦어도 값은 안 변한다. 신선도는 '장중일 때만' 문제다.
+        # (GitHub 스케줄러가 밀려 장중 수집 간격이 수십 분~수 시간으로 벌어진다.)
+        live_market = live.get("market_status") == "OPEN"
+        stale = live_market and live["_age_min"] > FRESH_LIMIT_MIN
+        flag = ("STALE ⚠" if stale else "FRESH ✓") if live_market else "장마감 · 종가"
         print(f" {live.get('name')} ({a.code})   [{live.get('market_status')}]  {flag}")
         print("=" * 66)
-        print(f"  현재가        {won(price)}   {live.get('change_pct'):+.2f}%")
-        if live.get("open"):
-            tr_today = max(live["high"] - live["low"],
-                           abs(live["high"] - (price - live["change"])),
-                           abs(live["low"] - (price - live["change"])))
-            print(f"  시/고/저      {live['open']:,.0f} / {live['high']:,.0f} / {live['low']:,.0f}")
+        print(f"  현재가        {won(price)}   {pct(live.get('change_pct'))}")
+
+        # 전일 종가: relay 가 prev_close 를 주면 그걸 쓰고, 없으면 현재가-등락폭으로 역산.
+        prev = live.get("prev_close")
+        if prev is None and live.get("change") is not None:
+            prev = price - live["change"]
+
+        if live.get("high") is not None and live.get("low") is not None:
+            cands = [live["high"] - live["low"]]
+            if prev is not None:
+                cands += [abs(live["high"] - prev), abs(live["low"] - prev)]
+            tr_today = max(cands)
+            o = f"{live['open']:,.0f}" if live.get("open") is not None else "—"
+            print(f"  시/고/저      {o} / {live['high']:,.0f} / {live['low']:,.0f}")
             print(f"  당일 TR       {won(tr_today)}  ({tr_today/price:.1%})")
+        if live.get("volume") is not None:
             print(f"  거래량        {live['volume']:,.0f}주")
         if live.get("high52"):
             print(f"  52주 최고     {won(live['high52'])}   현재 {price/live['high52']-1:+.1%}")
+        if live.get("trade_date"):
+            print(f"  거래일        {live['trade_date']}")
         print(f"  수집 시각     {live['_fetched']}  ({live['_age_min']:.0f}분 전)")
         if stale:
-            print(f"  ** {FRESH_LIMIT_MIN}분 초과 — relay README 기준 '사용 불가'. 참고용으로만 보십시오.")
+            print(f"  ** 장중인데 {FRESH_LIMIT_MIN}분 초과 — relay README 기준 '사용 불가'.")
+            print("     GitHub Actions 스케줄 지연이 원인이다. 체결 판단에 쓰지 마십시오.")
     else:
         price = hist[-1]["close"]
         print(f" {a.code}  (latest.json 없음 — history 최종 종가 사용)")

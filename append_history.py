@@ -11,6 +11,10 @@ krx-relay 저장소 루트에 두고, close.yml 워크플로에서 fetch_quotes.
      -> 워크플로가 하루에 여러 번 돌아도 안전하다.
   3. 장중 데이터는 절대 넣지 않는다. market_status 가 CLOSE 인 것만 받는다.
      -> 이게 없으면 14:36 짜리 미확정 시세가 종가로 굳어버린다.
+  4. 날짜는 수집 시각이 아니라 체결 시각(quote_time)에서 뽑는다.
+     -> 장 시작 전(07~09시) 스냅샷은 market_status 가 CLOSE 이고 내용은 전 거래일
+        종가다. 수집일로 기록하면 전일 종가가 당일 종가로 둔갑한다.
+        지수 행에는 OHLC 누락 가드가 걸리지 않으므로 이 규칙이 유일한 방어선이다.
  
 출력 형식 (JSON Lines, 1줄 = 1종목 1일)
   {"date":"2026-07-28","code":"009150","name":"삼성전기",
@@ -33,6 +37,16 @@ HIST = os.path.join(DATA, "history.jsonl")
 REQUIRED = ("open", "high", "low", "volume")
  
  
+def trade_date(item, fallback):
+    """체결 시각 기준 거래일. 못 구하면 fallback(수집일)."""
+    qt = item.get("trade_date") or item.get("quote_time")
+    if qt:
+        t = str(qt)[:10]
+        if len(t) == 10 and t[4] == "-" and t[7] == "-":
+            return t
+    return fallback
+
+
 def load_existing_keys(path):
     """이미 기록된 (date, code) 집합. 손상된 줄은 조용히 건너뛴다."""
     keys = set()
@@ -65,13 +79,17 @@ def main():
         return 0
  
     ts = datetime.fromisoformat(fetched)
-    date = ts.strftime("%Y-%m-%d")
- 
+    fetch_date = ts.strftime("%Y-%m-%d")
+
     existing = load_existing_keys(HIST)
     rows, skipped = [], []
- 
+
     # ---- 국내 종목 ----
     for code, s in (payload.get("domestic") or {}).items():
+        date = trade_date(s, fetch_date)
+        if date > fetch_date:                      # 미래 거래일은 있을 수 없다
+            skipped.append(f"{code}:날짜이상({date})")
+            continue
         if (date, code) in existing:
             skipped.append(f"{code}:이미기록")
             continue
@@ -102,7 +120,8 @@ def main():
  
     # ---- 지수 (OHLC 없음. 종가만) ----
     for key, v in (payload.get("index") or {}).items():
-        if (date, key) in existing:
+        date = trade_date(v, fetch_date)
+        if date > fetch_date or (date, key) in existing:
             continue
         if v.get("market_status") != "CLOSE" or v.get("price") is None:
             continue
@@ -114,12 +133,14 @@ def main():
             "close": v["price"],
             "volume": None,
             "change_pct": v.get("change_pct"),
+            "quote_time": v.get("quote_time"),
             "captured_at": fetched,
             "source": "relay",
         })
  
     if not rows:
-        print(f"append_history: 추가 없음 ({date}) — {', '.join(skipped) or '해당 없음'}")
+        print(f"append_history: 추가 없음 (수집일 {fetch_date}) "
+              f"— {', '.join(skipped) or '해당 없음'}")
         return 0
  
     os.makedirs(DATA, exist_ok=True)
@@ -127,7 +148,8 @@ def main():
         for r in rows:
             fp.write(json.dumps(r, ensure_ascii=False) + "\n")
  
-    print(f"append_history: {date} — {len(rows)}건 추가 "
+    dates = "/".join(sorted({r["date"] for r in rows}))
+    print(f"append_history: {dates} — {len(rows)}건 추가 "
           f"({', '.join(r['code'] for r in rows)})")
     if skipped:
         print(f"  건너뜀: {', '.join(skipped)}")
