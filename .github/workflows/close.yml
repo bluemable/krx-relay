@@ -96,3 +96,20 @@ jobs:
             sleep 5
           done
           exit 1
+
+      # 진단서 §5 의 "쓴 직후 되읽어 epoch 확인" 제안을 실제로 의미 있는 위치로 옮긴 것.
+      # 파일을 쓴 직후 되읽는 건 git 이 그걸 담았는지와 무관하다. 확인해야 할 것은
+      # '커밋에 들어갔는가'다. 스테이징이 조용히 누락되면 여기서 워크플로가 실패한다.
+      - name: Verify latest.json committed
+        run: |
+          python - <<'PY'
+          import json, subprocess, sys
+          disk = json.load(open('data/latest.json', encoding='utf-8'))
+          head = json.loads(subprocess.check_output(
+              ['git', 'show', 'HEAD:data/latest.json'], text=True))
+          if head.get('epoch') != disk.get('epoch'):
+              sys.exit("data/latest.json 이 커밋에 반영되지 않았다. "
+                       f"disk epoch={disk.get('epoch')} / HEAD epoch={head.get('epoch')}. "
+                       "조용한 실패를 시끄러운 실패로 바꾸기 위해 여기서 중단한다.")
+          print(f"latest.json 커밋 확인 — epoch {head.get('epoch')}, {disk.get('fetched_at_kst')}")
+          PY

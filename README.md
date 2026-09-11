@@ -89,6 +89,43 @@ curl -sS "https://raw.githubusercontent.com/<ID>/krx-relay/main/data/latest.json
 
 ---
 
+## `latest.json` 이 멈춘 것처럼 보일 때
+
+읽는 쪽에서 `fetched_at_kst` 가 몇 주 전으로 나오면, **저장소가 아니라 읽는 경로를 먼저 의심한다.**
+2026-09-11 에 "6주째 정지" 로 진단된 사례가 있었는데 실제 원인은 저장소가 아니었다.
+
+판정은 한 줄이면 끝난다. 저장소가 서는 값과 내가 받은 값을 직접 비교한다.
+
+```bash
+curl -sS "https://raw.githubusercontent.com/bluemable/krx-relay/main/data/latest.json?t=$(date +%s)" \
+  | python3 -c "import json,sys; d=json.load(sys.stdin); print(d['fetched_at_kst'], d['epoch'])"
+```
+
+- 여기서 **오늘 날짜가 나오면 저장소는 정상**이다. 낡은 값을 본 쪽의 캐시 문제다.
+  (`?t=` 는 CDN 은 우회하지만, 쿼리스트링을 무시하고 경로로만 캐싱하는 중간 프록시는 못 뚫는다.
+  매일 URL 이 바뀌는 `data/<날짜>.json` 은 캐시될 수 없어서 **혼자만 멀쩡해 보이는** 현상이
+  생긴다. 한 파일만 낡아 보이면 대개 이 경우다.)
+- 오래된 날짜가 나오면 그때 저장소를 본다. `Actions` 탭에서 `quotes` 실행 이력과
+  `Verify latest.json committed` 스텝을 확인한다.
+
+### 하지 말 것
+
+- **`git update-index --skip-worktree` / `--assume-unchanged` 를 원인으로 의심하지 말 것.**
+  이 플래그는 `.git/index` 안에만 있는 로컬 상태이고 커밋이나 clone 으로 전달되지 않는다.
+  러너는 매번 새로 checkout 하므로 애초에 이 상태를 물려받을 수 없다.
+  (확인하고 싶으면 `git ls-files -v data/` — 정상은 전부 `H` 다.)
+- **`latest.json` 을 날짜 파일로 향하는 심볼릭 링크로 두지 말 것.**
+  `raw.githubusercontent.com` 은 심볼릭 링크를 따라가지 않고 **링크 대상 경로를 그냥 텍스트로
+  돌려준다.** 읽는 쪽 전부가 깨진다.
+
+### 조용한 실패 방지 장치
+
+`quotes` / `close` 워크플로 마지막에 `Verify latest.json committed` 스텝이 있다.
+방금 쓴 파일의 `epoch` 과 커밋에 실제로 들어간 `epoch` 을 비교해서, 다르면 워크플로를
+실패시킨다. 어떤 이유로든 `latest.json` 이 커밋에서 누락되면 Actions 가 빨갛게 뜬다.
+
+---
+
 ## 갱신 주기와 한계
 
 | 항목 | 실제 값 (2026-09 실측) |
@@ -127,10 +164,17 @@ curl -sS "https://raw.githubusercontent.com/<ID>/krx-relay/main/data/latest.json
 - 국내 종목 값은 두 엔드포인트에서 온다. `basic` 은 현재가·등락·장상태만 주고,
   전일종가·시고저·거래량·시총·PER·PBR 은 전부 `integration` 에만 있다.
   스키마가 바뀌어 특정 필드만 `null` 로 변하면 대개 `integration` 쪽 키 변경이다.
-- 일별 스냅샷(`data/YYYY-MM-DD.json`)은 **거래일 기준 파일명**이며,
-  이미 있는 스냅샷보다 채워진 필드가 적으면 덮어쓰지 않는다.
-  (장 시작 전 수집분에는 시고저·거래량이 없어서, 이 가드가 없으면 다음 날 아침
-  수집이 전날의 완전한 종가 스냅샷을 깎아먹는다.)
+- 파일 두 종류의 날짜 기준이 다르다. 헷갈리면 안 된다.
+
+  | 경로 | 날짜 기준 | 내용 |
+  |---|---|---|
+  | `data/<수집일>.json` | **수집일** | 그 날 수집된 최신 상태. 아침 수집분은 전 거래일 종가 + 직전 미국 종가 |
+  | `data/close/<거래일>.json` | **거래일** | 종가 확정 아카이브 |
+  | `data/history.jsonl` | **거래일** | 종가 누적 (`quote_time` 기준으로 귀속) |
+
+  어느 거래일 데이터인지는 파일명이 아니라 payload 의 `trade_date` 로 판단한다.
+- 일별 스냅샷은 이미 있는 파일보다 채워진 필드가 적으면 덮어쓰지 않는다.
+  (`integration` 일시 실패로 시고저·거래량이 빈 수집분이 그 날의 온전한 스냅샷을 깎는 것 방지)
 
 ---
 

@@ -331,14 +331,17 @@ def main():
     with open(os.path.join(outdir, "latest.json"), "w", encoding="utf-8") as fp:
         json.dump(payload, fp, ensure_ascii=False, indent=2)
 
-    # 일별 스냅샷.
-    # 파일명은 수집일이 아니라 거래일이다. 07~09시(장 시작 전) 수집분은 전 거래일
-    # 데이터를 담고 있으므로, 수집일로 이름 붙이면 당일 파일이 전일 값으로 채워진다.
+    # 일별 스냅샷 = '그 날짜에 수집된 상태'. 파일명은 수집일 기준이다.
     #
-    # 단 그 스냅샷은 시/고/저/거래량이 비어 있다(장전에는 네이버가 안 준다).
-    # 그래서 '이미 있는 스냅샷보다 채워진 필드가 적으면 덮어쓰지 않는다'.
-    # 이 가드가 없으면 다음날 아침 수집이 전날의 완전한 종가 스냅샷을 깎아먹는다.
-    snap_date = payload["trade_date"] or f"{now:%Y-%m-%d}"
+    #   data/<수집일>.json   그 날 수집된 최신 상태. 아침 수집분은 전 거래일 종가 +
+    #                        직전 미국 종가를 담는다(브리핑이 이 파일을 읽는다).
+    #   data/close/<거래일>.json  종가 확정 아카이브. 이쪽만 거래일 기준이다.
+    #
+    # 어느 거래일 데이터인지는 파일명이 아니라 payload 의 trade_date 로 판단한다.
+    #
+    # 덮어쓰기 가드: 이미 있는 스냅샷보다 채워진 필드가 적으면 쓰지 않는다.
+    # integration 일시 실패로 OHLC 가 빈 수집분이 그 날의 완전한 스냅샷을 깎는 것을 막는다.
+    snap_date = f"{now:%Y-%m-%d}"
     snap = os.path.join(outdir, f"{snap_date}.json")
     if _coverage(payload) >= _coverage(_load(snap)):
         with open(snap, "w", encoding="utf-8") as fp:
