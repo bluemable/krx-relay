@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-09-11T16:56:43+09:00",
-  "fetched_at_utc": "2026-09-11T07:56:43+00:00",
-  "epoch": 1789113403,
+  "fetched_at_kst": "2026-09-11T20:50:04+09:00",
+  "fetched_at_utc": "2026-09-11T11:50:04+00:00",
+  "epoch": 1789127404,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -19,7 +19,7 @@
       "open": 260000.0,
       "high": 264000.0,
       "low": 256500.0,
-      "volume": 20748753.0,
+      "volume": 22016031.0,
       "value": null,
       "high52": 380000.0,
       "low52": 73100.0
@@ -38,7 +38,7 @@
       "open": 1345000.0,
       "high": 1427000.0,
       "low": 1336000.0,
-      "volume": 933038.0,
+      "volume": 969965.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 187000.0
@@ -57,7 +57,7 @@
       "open": 382500.0,
       "high": 385000.0,
       "low": 378000.0,
-      "volume": 660780.0,
+      "volume": 689350.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -74,9 +74,9 @@
       "market_status": "CLOSE",
       "quote_time": "2026-09-11T16:10:21+09:00",
       "open": 1800000.0,
-      "high": 1827000.0,
+      "high": 1832000.0,
       "low": 1768000.0,
-      "volume": 3902938.0,
+      "volume": 4193909.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 308500.0
@@ -89,7 +89,7 @@
       "change": -124.01,
       "change_pct": -1.76,
       "market_status": "CLOSE",
-      "quote_time": "2026-09-11T16:55:00+09:00"
+      "quote_time": "2026-09-11T18:59:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
@@ -97,14 +97,14 @@
       "change": -16.28,
       "change_pct": -1.95,
       "market_status": "CLOSE",
-      "quote_time": "2026-09-11T16:56:00+09:00"
+      "quote_time": "2026-09-11T18:59:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1345.4,
-    "change_pct": -0.41,
-    "date": "2026-09-11T16:55:23+09:00",
+    "price": 1342.7,
+    "change_pct": -0.61,
+    "date": "2026-09-11T20:46:33+09:00",
     "endpoint": "front"
   },
   "overseas": {
