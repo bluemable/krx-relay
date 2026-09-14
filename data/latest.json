@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-09-14T22:22:31+09:00",
-  "fetched_at_utc": "2026-09-14T13:22:31+00:00",
-  "epoch": 1789392151,
+  "fetched_at_kst": "2026-09-14T22:59:06+09:00",
+  "fetched_at_utc": "2026-09-14T13:59:06+00:00",
+  "epoch": 1789394346,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -102,143 +102,143 @@
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1350.0,
-    "change_pct": 0.46,
-    "date": "2026-09-14T22:17:33+09:00",
+    "price": 1350.5,
+    "change_pct": 0.5,
+    "date": "2026-09-14T22:55:43+09:00",
     "endpoint": "front"
   },
   "overseas": {
     "SPYM": {
-      "price": 89.72,
-      "prev_close": 89.21,
-      "change_pct": 0.57,
-      "asof": "2026-09-11"
+      "price": 89.225,
+      "prev_close": 89.72,
+      "change_pct": -0.55,
+      "asof": "2026-09-14"
     },
     "QQQM": {
-      "price": 294.39,
-      "prev_close": 291.8,
-      "change_pct": 0.89,
-      "asof": "2026-09-11"
+      "price": 290.6245,
+      "prev_close": 294.39,
+      "change_pct": -1.28,
+      "asof": "2026-09-14"
     },
     "SCHD": {
-      "price": 34.12,
-      "prev_close": 33.99,
-      "change_pct": 0.38,
-      "asof": "2026-09-11"
+      "price": 34.385,
+      "prev_close": 34.12,
+      "change_pct": 0.78,
+      "asof": "2026-09-14"
     },
     "QLD": {
-      "price": 89.55,
-      "prev_close": 88.02,
-      "change_pct": 1.74,
-      "asof": "2026-09-11"
+      "price": 87.26,
+      "prev_close": 89.55,
+      "change_pct": -2.56,
+      "asof": "2026-09-14"
     },
     "QQQ": {
-      "price": 714.88,
-      "prev_close": 708.69,
-      "change_pct": 0.87,
-      "asof": "2026-09-11"
+      "price": 705.88,
+      "prev_close": 714.88,
+      "change_pct": -1.26,
+      "asof": "2026-09-14"
     },
     "SPYI": {
-      "price": 53.575,
-      "prev_close": 53.18,
-      "change_pct": 0.74,
-      "asof": "2026-09-11"
+      "price": 53.335,
+      "prev_close": 53.575,
+      "change_pct": -0.45,
+      "asof": "2026-09-14"
     },
     "QQQI": {
-      "price": 54.56,
-      "prev_close": 54.08,
-      "change_pct": 0.89,
-      "asof": "2026-09-11"
+      "price": 53.97,
+      "prev_close": 54.56,
+      "change_pct": -1.08,
+      "asof": "2026-09-14"
     },
     "MAIN": {
-      "price": 56.22,
-      "prev_close": 55.8,
-      "change_pct": 0.75,
-      "asof": "2026-09-11"
+      "price": 56.315,
+      "prev_close": 56.22,
+      "change_pct": 0.17,
+      "asof": "2026-09-14"
     },
     "O": {
-      "price": 59.5,
-      "prev_close": 59.57,
-      "change_pct": -0.12,
-      "asof": "2026-09-11"
+      "price": 59.695,
+      "prev_close": 59.5,
+      "change_pct": 0.33,
+      "asof": "2026-09-14"
     },
     "MO": {
-      "price": 68.98,
-      "prev_close": 68.79,
-      "change_pct": 0.28,
-      "asof": "2026-09-11"
+      "price": 70.72,
+      "prev_close": 68.98,
+      "change_pct": 2.52,
+      "asof": "2026-09-14"
     },
     "KO": {
-      "price": 88.29,
-      "prev_close": 87.83,
-      "change_pct": 0.52,
-      "asof": "2026-09-11"
+      "price": 89.26,
+      "prev_close": 88.29,
+      "change_pct": 1.1,
+      "asof": "2026-09-14"
     },
     "GOOGL": {
-      "price": 338.5,
-      "prev_close": 332.6,
-      "change_pct": 1.77,
-      "asof": "2026-09-11"
+      "price": 347.0,
+      "prev_close": 338.5,
+      "change_pct": 2.51,
+      "asof": "2026-09-14"
     },
     "AMZN": {
-      "price": 256.78,
-      "prev_close": 251.89,
-      "change_pct": 1.94,
-      "asof": "2026-09-11"
+      "price": 252.975,
+      "prev_close": 256.78,
+      "change_pct": -1.48,
+      "asof": "2026-09-14"
     },
     "IBM": {
-      "price": 243.29,
-      "prev_close": 234.02,
-      "change_pct": 3.96,
-      "asof": "2026-09-11"
+      "price": 244.965,
+      "prev_close": 243.29,
+      "change_pct": 0.69,
+      "asof": "2026-09-14"
     },
     "IAU": {
-      "price": 81.71,
-      "prev_close": 81.27,
-      "change_pct": 0.54,
-      "asof": "2026-09-11"
+      "price": 80.319,
+      "prev_close": 81.71,
+      "change_pct": -1.7,
+      "asof": "2026-09-14"
     },
     "UGL": {
-      "price": 50.31,
-      "prev_close": 49.72,
-      "change_pct": 1.19,
-      "asof": "2026-09-11"
+      "price": 48.47,
+      "prev_close": 50.31,
+      "change_pct": -3.66,
+      "asof": "2026-09-14"
     },
     "NVDA": {
-      "price": 218.29,
-      "prev_close": 218.36,
-      "change_pct": -0.03,
-      "asof": "2026-09-11"
+      "price": 210.83,
+      "prev_close": 218.29,
+      "change_pct": -3.42,
+      "asof": "2026-09-14"
     },
     "SKHY": {
-      "price": 190.07,
-      "prev_close": 188.3,
-      "change_pct": 0.94,
-      "asof": "2026-09-11"
+      "price": 176.87,
+      "prev_close": 190.07,
+      "change_pct": -6.94,
+      "asof": "2026-09-14"
     },
     "NASA": {
-      "price": 23.44,
-      "prev_close": 23.04,
-      "change_pct": 1.74,
-      "asof": "2026-09-11"
+      "price": 22.875,
+      "prev_close": 23.44,
+      "change_pct": -2.41,
+      "asof": "2026-09-14"
     },
     "SOXX": {
-      "price": 527.07,
-      "prev_close": 517.43,
-      "change_pct": 1.86,
-      "asof": "2026-09-11"
+      "price": 499.18,
+      "prev_close": 527.07,
+      "change_pct": -5.29,
+      "asof": "2026-09-14"
     },
     "SMH": {
-      "price": 568.53,
-      "prev_close": 560.28,
-      "change_pct": 1.47,
-      "asof": "2026-09-11"
+      "price": 542.45,
+      "prev_close": 568.53,
+      "change_pct": -4.59,
+      "asof": "2026-09-14"
     },
     "^SOX": {
-      "price": 11824.0,
-      "prev_close": 11614.1699,
-      "change_pct": 1.81,
-      "asof": "2026-09-11"
+      "price": 11204.2266,
+      "prev_close": 11824.0,
+      "change_pct": -5.24,
+      "asof": "2026-09-14"
     }
   },
   "errors": [
