@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-09-18T17:13:35+09:00",
-  "fetched_at_utc": "2026-09-18T08:13:35+00:00",
-  "epoch": 1789719215,
+  "fetched_at_kst": "2026-09-18T20:51:44+09:00",
+  "fetched_at_utc": "2026-09-18T11:51:44+00:00",
+  "epoch": 1789732304,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -14,12 +14,12 @@
       "market_cap": null,
       "per": null,
       "pbr": null,
-      "market_status": "OPEN",
-      "quote_time": "2026-09-18T17:13:21+09:00",
+      "market_status": "CLOSE",
+      "quote_time": "2026-09-18T20:20:22+09:00",
       "open": 259500.0,
       "high": 262000.0,
       "low": 257500.0,
-      "volume": 20670037.0,
+      "volume": 21619973.0,
       "value": null,
       "high52": 380000.0,
       "low52": 79600.0
@@ -33,31 +33,31 @@
       "market_cap": null,
       "per": null,
       "pbr": null,
-      "market_status": "OPEN",
-      "quote_time": "2026-09-18T17:13:22+09:00",
+      "market_status": "CLOSE",
+      "quote_time": "2026-09-18T20:20:24+09:00",
       "open": 1370000.0,
       "high": 1420000.0,
       "low": 1366000.0,
-      "volume": 1232787.0,
+      "volume": 1258946.0,
       "value": null,
       "high52": 2417000.0,
       "low52": 188600.0
     },
     "005380": {
       "name": "현대차",
-      "price": 366000.0,
-      "change": 3000.0,
-      "change_pct": 0.83,
+      "price": 366500.0,
+      "change": 3500.0,
+      "change_pct": 0.96,
       "prev_close": null,
       "market_cap": null,
       "per": null,
       "pbr": null,
-      "market_status": "OPEN",
-      "quote_time": "2026-09-18T17:13:22+09:00",
+      "market_status": "CLOSE",
+      "quote_time": "2026-09-18T20:20:24+09:00",
       "open": 367500.0,
       "high": 372000.0,
       "low": 365000.0,
-      "volume": 724537.0,
+      "volume": 753048.0,
       "value": null,
       "high52": 787000.0,
       "low52": 211000.0
@@ -71,12 +71,12 @@
       "market_cap": null,
       "per": null,
       "pbr": null,
-      "market_status": "OPEN",
-      "quote_time": "2026-09-18T17:12:59+09:00",
+      "market_status": "CLOSE",
+      "quote_time": "2026-09-18T20:20:23+09:00",
       "open": 1810000.0,
       "high": 1857000.0,
       "low": 1798000.0,
-      "volume": 5917789.0,
+      "volume": 6158964.0,
       "value": null,
       "high52": 3002000.0,
       "low52": 333000.0
@@ -89,7 +89,7 @@
       "change": 178.82,
       "change_pct": 2.66,
       "market_status": "CLOSE",
-      "quote_time": "2026-09-18T16:15:00+09:00"
+      "quote_time": "2026-09-18T20:15:00+09:00"
     },
     "KOSDAQ": {
       "name": "코스닥",
@@ -97,14 +97,14 @@
       "change": 4.94,
       "change_pct": 0.6,
       "market_status": "CLOSE",
-      "quote_time": "2026-09-18T16:15:00+09:00"
+      "quote_time": "2026-09-18T20:15:00+09:00"
     }
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1384.4,
-    "change_pct": 0.17,
-    "date": "2026-09-18T17:11:44+09:00",
+    "price": 1387.7,
+    "change_pct": 0.49,
+    "date": "2026-09-18T20:50:24+09:00",
     "endpoint": "front"
   },
   "overseas": {
