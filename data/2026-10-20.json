@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-10-20T21:15:01+09:00",
-  "fetched_at_utc": "2026-10-20T12:15:01+00:00",
-  "epoch": 1792498501,
+  "fetched_at_kst": "2026-10-20T21:41:18+09:00",
+  "fetched_at_utc": "2026-10-20T12:41:18+00:00",
+  "epoch": 1792500078,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -102,9 +102,9 @@
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1328.2,
-    "change_pct": -0.4,
-    "date": "2026-10-20T21:10:53+09:00",
+    "price": 1327.7,
+    "change_pct": -0.43,
+    "date": "2026-10-20T21:40:03+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -181,10 +181,7 @@
       "asof": "2026-10-19"
     },
     "AMZN": {
-      "price": 262.45,
-      "prev_close": 250.0,
-      "change_pct": 4.98,
-      "asof": "2026-10-19"
+      "error": "insufficient_data"
     },
     "IBM": {
       "price": 236.39,
