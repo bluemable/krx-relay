@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-10-27T21:41:42+09:00",
-  "fetched_at_utc": "2026-10-27T12:41:42+00:00",
-  "epoch": 1793104902,
+  "fetched_at_kst": "2026-10-27T22:09:13+09:00",
+  "fetched_at_utc": "2026-10-27T13:09:13+00:00",
+  "epoch": 1793106553,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -102,9 +102,9 @@
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1327.1,
-    "change_pct": 0.01,
-    "date": "2026-10-27T21:40:04+09:00",
+    "price": 1327.9,
+    "change_pct": 0.07,
+    "date": "2026-10-27T22:07:04+09:00",
     "endpoint": "front"
   },
   "overseas": {
