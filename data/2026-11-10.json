@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-11-10T01:52:50+09:00",
-  "fetched_at_utc": "2026-11-09T16:52:50+00:00",
-  "epoch": 1794243170,
+  "fetched_at_kst": "2026-11-10T02:26:00+09:00",
+  "fetched_at_utc": "2026-11-09T17:26:00+00:00",
+  "epoch": 1794245160,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -102,22 +102,22 @@
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1345.5,
-    "change_pct": -1.32,
-    "date": "2026-11-10T01:51:33+09:00",
+    "price": 1344.9,
+    "change_pct": -1.36,
+    "date": "2026-11-10T02:24:04+09:00",
     "endpoint": "front"
   },
   "overseas": {
     "SPYM": {
-      "price": 88.3925,
+      "price": 88.5198,
       "prev_close": 86.56,
-      "change_pct": 2.12,
+      "change_pct": 2.26,
       "asof": "2026-11-09"
     },
     "QQQM": {
-      "price": 278.7499,
+      "price": 278.99,
       "prev_close": 270.22,
-      "change_pct": 3.16,
+      "change_pct": 3.25,
       "asof": "2026-11-09"
     },
     "SCHD": {
@@ -127,117 +127,117 @@
       "asof": "2026-11-09"
     },
     "QLD": {
-      "price": 78.745,
+      "price": 78.94,
       "prev_close": 74.11,
-      "change_pct": 6.25,
+      "change_pct": 6.52,
       "asof": "2026-11-09"
     },
     "QQQ": {
-      "price": 676.92,
+      "price": 677.56,
       "prev_close": 656.1,
-      "change_pct": 3.17,
+      "change_pct": 3.27,
       "asof": "2026-11-09"
     },
     "SPYI": {
-      "price": 52.235,
+      "price": 52.295,
       "prev_close": 51.29,
-      "change_pct": 1.84,
+      "change_pct": 1.96,
       "asof": "2026-11-09"
     },
     "QQQI": {
-      "price": 50.9,
+      "price": 50.94,
       "prev_close": 49.48,
-      "change_pct": 2.87,
+      "change_pct": 2.95,
       "asof": "2026-11-09"
     },
     "MAIN": {
-      "price": 56.925,
+      "price": 57.23,
       "prev_close": 57.01,
-      "change_pct": -0.15,
+      "change_pct": 0.39,
       "asof": "2026-11-09"
     },
     "O": {
-      "price": 59.395,
+      "price": 59.3451,
       "prev_close": 59.04,
-      "change_pct": 0.6,
+      "change_pct": 0.52,
       "asof": "2026-11-09"
     },
     "MO": {
-      "price": 75.395,
+      "price": 75.275,
       "prev_close": 76.12,
-      "change_pct": -0.95,
+      "change_pct": -1.11,
       "asof": "2026-11-09"
     },
     "KO": {
-      "price": 95.865,
+      "price": 95.71,
       "prev_close": 95.67,
-      "change_pct": 0.2,
+      "change_pct": 0.04,
       "asof": "2026-11-09"
     },
     "GOOGL": {
-      "price": 291.12,
+      "price": 291.525,
       "prev_close": 284.78,
-      "change_pct": 2.23,
+      "change_pct": 2.37,
       "asof": "2026-11-09"
     },
     "AMZN": {
-      "price": 268.43,
+      "price": 268.795,
       "prev_close": 259.3,
-      "change_pct": 3.52,
+      "change_pct": 3.66,
       "asof": "2026-11-09"
     },
     "IBM": {
-      "price": 247.49,
+      "price": 247.85,
       "prev_close": 245.0,
-      "change_pct": 1.02,
+      "change_pct": 1.16,
       "asof": "2026-11-09"
     },
     "IAU": {
-      "price": 77.15,
+      "price": 77.1248,
       "prev_close": 76.38,
-      "change_pct": 1.01,
+      "change_pct": 0.98,
       "asof": "2026-11-09"
     },
     "UGL": {
-      "price": 44.075,
+      "price": 44.045,
       "prev_close": 43.2,
-      "change_pct": 2.03,
+      "change_pct": 1.96,
       "asof": "2026-11-09"
     },
     "NVDA": {
-      "price": 177.005,
+      "price": 177.78,
       "prev_close": 186.64,
-      "change_pct": -5.16,
+      "change_pct": -4.75,
       "asof": "2026-11-09"
     },
     "SKHY": {
-      "price": 134.0,
+      "price": 133.155,
       "prev_close": 127.34,
-      "change_pct": 5.23,
+      "change_pct": 4.57,
       "asof": "2026-11-09"
     },
     "NASA": {
-      "price": 21.03,
+      "price": 20.8814,
       "prev_close": 19.29,
-      "change_pct": 9.02,
+      "change_pct": 8.25,
       "asof": "2026-11-09"
     },
     "SOXX": {
-      "price": 146.1,
+      "price": 145.85,
       "prev_close": 136.53,
-      "change_pct": 7.01,
+      "change_pct": 6.83,
       "asof": "2026-11-09"
     },
     "SMH": {
-      "price": 485.295,
+      "price": 484.96,
       "prev_close": 463.96,
-      "change_pct": 4.6,
+      "change_pct": 4.53,
       "asof": "2026-11-09"
     },
     "^SOX": {
-      "price": 10004.1738,
+      "price": 9992.7637,
       "prev_close": 9390.25,
-      "change_pct": 6.54,
+      "change_pct": 6.42,
       "asof": "2026-11-09"
     }
   },
