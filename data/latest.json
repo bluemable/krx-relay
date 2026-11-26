@@ -1,7 +1,7 @@
 {
-  "fetched_at_kst": "2026-11-27T02:53:36+09:00",
-  "fetched_at_utc": "2026-11-26T17:53:36+00:00",
-  "epoch": 1795715616,
+  "fetched_at_kst": "2026-11-27T03:30:49+09:00",
+  "fetched_at_utc": "2026-11-26T18:30:49+00:00",
+  "epoch": 1795717849,
   "source": "naver m.stock api (domestic) / yfinance (overseas)",
   "schema": 1,
   "domestic": {
@@ -102,9 +102,9 @@
   },
   "fx": {
     "pair": "USD/KRW",
-    "price": 1344.4,
-    "change_pct": -0.08,
-    "date": "2026-11-27T02:49:42+09:00",
+    "price": 1344.1,
+    "change_pct": -0.1,
+    "date": "2026-11-27T03:29:24+09:00",
     "endpoint": "front"
   },
   "overseas": {
@@ -211,10 +211,7 @@
       "asof": "2026-11-25"
     },
     "SKHY": {
-      "price": 111.14,
-      "prev_close": 111.98,
-      "change_pct": -0.75,
-      "asof": "2026-11-25"
+      "error": "insufficient_data"
     },
     "NASA": {
       "price": 17.59,
